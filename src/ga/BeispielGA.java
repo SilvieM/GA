@@ -2,8 +2,8 @@ package ga;
 
 import java.io.File;
 
-import jxl.*;
-import jxl.write.*;
+//import jxl.*;
+//import jxl.write.*;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,7 +14,7 @@ import static ga.GASettings.*;
 class BeispielGA {
 
     public static GASettings settings = new GASettings(Selections.halfdie, SelectionPressure.easy, Crossover.onepoint, Mutation.bitflip);
-    public static WritableSheet sheet;
+    //public static WritableSheet sheet;
     
     
     static String[] filenames = {"250/a/ga250a-1", "250/a/ga250a-2", "250/a/ga250a-3", "250/a/ga250a-4","250/a/ga250a-5",
@@ -32,12 +32,12 @@ class BeispielGA {
 
         try {
             
-            WritableWorkbook wb = Workbook.createWorkbook(new File("lsg_4.xls"));
+           /* WritableWorkbook wb = Workbook.createWorkbook(new File("lsg_4.xls"));
             WritableSheet ws = wb.createSheet("Sheet1", 0);
             for (int i=0;i<filenames.length;i++) {
                 ws.addCell(new Label(1, i+1 , filenames[i]));
                 ws.addCell(new Label(0, i+1 , String.valueOf(i)));
-            }
+            }*/
             /*
             
             for (String filename : filenames) {
@@ -93,9 +93,10 @@ class BeispielGA {
             //useBitFlipMutation = false;
 
             for(String filename : filenames){
+                System.out.print("File "+filename+": ");
                 berechneEinFile(filename);
             }
-             for(int i = 0; i<GA.Results.size(); i++){
+             /*for(int i = 0; i<GA.Results.size(); i++){
                 Individuum indi = GA.Results.get(i);
                String Fitness = String.format("%.12f", indi.fitness);
                 String DifferenceToLiterature = String.format("%.12f", indi.DiffFromLit);
@@ -107,7 +108,7 @@ class BeispielGA {
             GA.Results.clear();
             
             wb.write();
-            wb.close();
+            wb.close();*/
             
         } catch (Exception ex) {
             Logger.getLogger(BeispielGA.class.getName()).log(Level.SEVERE, null, ex);

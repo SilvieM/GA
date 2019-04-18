@@ -227,12 +227,12 @@ class GA {
                 fitnesscounter += indi.reversedFitness;
             }
             //nur zur fehlervermeidung... eigentlich sollte das nicht nötig sein
-            /*if(best == null){
+            if(best == null){
                 best = parents.getFirst();
             }
             if (secondbest == null){
                 secondbest = parents.getFirst();
-            }*/
+            }
             if (settings.crossover == GASettings.Crossover.uniform) {
                 uniform_crossover(best, secondbest);
             } else {
