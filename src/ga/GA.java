@@ -226,7 +226,7 @@ class GA {
                 }
                 fitnesscounter += indi.reversedFitness;
             }
-            //nur zur fehlervermeidung... eigentlich sollte das nicht nötig sein
+            //nur zur fehlervermeidung...
             if(best == null){
                 best = parents.getFirst();
             }
@@ -349,7 +349,6 @@ class GA {
             bestSolution.DiffFromLit = Difference;
             bestSolution.Optimum = bestFromFile;
             Results.add(bestSolution);
-        //BeispielGA.sheet
 
         } catch (Exception ex) {
             Logger.getLogger(GA.class.getName()).log(Level.SEVERE, null, ex);

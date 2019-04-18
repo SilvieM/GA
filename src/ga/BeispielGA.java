@@ -1,7 +1,5 @@
 package ga;
 
-import java.io.File;
-
 //import jxl.*;
 //import jxl.write.*;
 
@@ -41,7 +39,7 @@ class BeispielGA {
             /*
             
             for (String filename : filenames) {
-                berechneEinFile(filename);
+                calculateOneFile(filename);
             }
             for(int i=0;i<GA.Results.size();i++){
                 Individuum indi = GA.Results.get(i);
@@ -58,7 +56,7 @@ class BeispielGA {
             //useSelektionUeberlebende_haelfte = false;
             /*
             for(String filename : filenames){
-                berechneEinFile(filename);
+                calculateOneFile(filename);
             }
             for(int i=0;i<GA.Results.size();i++){
                 Individuum indi = GA.Results.get(i);
@@ -76,7 +74,7 @@ class BeispielGA {
             /*useUniformCrossover = false;
             
             for(String filename : filenames){
-                berechneEinFile(filename);
+                calculateOneFile(filename);
             }
              for(int i=0;i<GA.Results.size();i++){
                 Individuum indi = GA.Results.get(i);
@@ -94,7 +92,7 @@ class BeispielGA {
 
             for(String filename : filenames){
                 System.out.print("File "+filename+": ");
-                berechneEinFile(filename);
+                calculateOneFile(filename);
             }
              /*for(int i = 0; i<GA.Results.size(); i++){
                 Individuum indi = GA.Results.get(i);
@@ -115,7 +113,7 @@ class BeispielGA {
         }
     }
     
-    public static void berechneEinFile(String filename){
+    public static void calculateOneFile(String filename){
         GA ga = new GA(filename, settings);
 
         for (int g = 0; g < 400; g++) {

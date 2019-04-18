@@ -7,7 +7,7 @@ package ga;
 
 /**
  *
- * @author 52musi1bif
+ * @author 82musi1mst
  */
 public class Individuum implements Comparable {
     int nummer;
